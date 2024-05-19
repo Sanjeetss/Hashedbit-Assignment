@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign3.3</title>
+</head>
+<body>
+    <h1>Assign 3.4</h1>
+    <form id="summationform">
+        <label for="no1">1st number </label>
+        <input type="text" id="num1" required><br>
+        <label for="no2">2nd number </label>
+        <input type="text" id="num2" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function sumofproducts(n1,n2){
+            let str1 =n1.toString();
+            let str2 =n2.toString();
+            let maxLength = Math.max(str1.length,str2.length);
+            add=0;
+            for(var i=0; i<maxLength; i++){
+                let d1=i<str1.length ? parseInt(str1[str1.length-1-i]): 0;
+                let d2=i<str2.length ? parseInt(str2[str2.length-1-i]): 0;
+                add+=d1*d2;
+            }
+            return add;
+        }
+
+        document.getElementById('summationform').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const n1 = document.getElementById('num1').value;
+            const n2 = document.getElementById('num2').value;
+            const sum = sumofproducts(n1,n2);
+            document.write("The Summation is: " + sum);
+        });
+    </script>
+</body>
+</html>

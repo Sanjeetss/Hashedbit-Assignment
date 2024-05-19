@@ -1,0 +1,6 @@
+.image{
+    align-items: center;
+    width: 50%;
+    border: 20px solid darkgray;
+    border-radius: 3%;
+}

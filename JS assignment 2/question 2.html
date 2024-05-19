@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign3.2</title>
+</head>
+<body>
+    <h1>Assign3.2</h1>
+    <p>A program that takes two numbers as input and performs arithmetic operations.</p>
+    <button onclick="calculator()">Calculate</button>
+    <script>
+        function calculator() {
+        let num1 = prompt("Please enter 1st number");
+
+let num2 = prompt("Please enter 2nd number");
+
+let choice = prompt("Choose operation...\n1. Addition\n2. Subtraction\n3. Multiplication\n4.Division");
+
+switch (choice) {
+    case "1":
+        alert(num1 + num2);
+        break;
+    case "2":
+        alert(num1 - num2);
+        break;
+    case "3":
+        alert(num1 * num2);
+        break;
+    case "4":
+        alert(num1 / num2);
+        break;
+    default:
+        alert("Invalid choice");
+        break;
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign3.3</title>
+</head>
+<body>
+    <h1>Assign 3.3</h1>
+    <form id="salaryform">
+        <label for="salary">Salary: </label>
+        <input type="number" name="salary" id="salary" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function findTax(sal) {
+            let tax = 0;
+            switch (true) {
+                case (sal <= 500000):
+                    tax = 0;
+                    break;
+                case (sal > 500000 && sal <= 1000000):
+                    tax = 0.1 * sal;
+                    break;
+                case (sal > 1000000 && sal <= 1500000):
+                    tax = 0.2 * sal;
+                    break;
+                case (sal > 1500000):
+                    tax = 0.3 * sal;
+                    break;
+                default:
+                    tax = 0;
+                    break;
+            }
+            return tax;
+        }
+
+        document.getElementById('salaryform').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const salary = parseFloat(document.getElementById('salary').value);
+            const tax = findTax(salary);
+            const inHandSalary = salary - tax;
+            document.write("The tax is " + tax + "<br>" + "The in-hand salary is " + inHandSalary + "<br>");
+        });
+    </script>
+</body>
+</html>
