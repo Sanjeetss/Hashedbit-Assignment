@@ -1,0 +1,47 @@
+
+.calculator {
+    max-width: 30%;
+    margin: 84px auto;
+    padding:  30px 0;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+
+  
+  }
+  
+  .text_box {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #888080;
+    border-radius: 4px;
+    max-width: 50%;
+  }
+  
+  .arith_button {
+    display: inline-block;
+    padding: 8px;
+    margin: 0 4px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 25px;
+    width: 11%;
+}
+  
+  .arith_button:hover {
+    background-color: #0056b3;
+  }
+  
+  .result {
+    background-color: #96ceff;
+    font-size: 40px;
+    font-weight: bold;
+    max-width: 80%;
+    margin: 0 auto 5% auto;
+    border-radius: 7px;
+  }
+  
