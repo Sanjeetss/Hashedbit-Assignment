@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign 4.1</title>
+    <style>
+        .day {
+            background-color: white;
+            color: black;
+        }
+        
+        .night {
+            background-color: black;
+            color: gold;
+        }
+        
+        .button_night {
+            background-color: darkblue;
+            color: white;
+        }
+        
+        .button_day{
+            background-color: white;
+            color: black;
+        }
+        
+        html, body {
+            margin: 0px;
+            height: 100%;
+        }
+        
+        #app {
+            height: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="day">
+        <p>I am a HashedBit student, ready to become an awesome full stack developer</p>
+        <button onclick="swapTheme()" id="swap" class="button_day">Toggle theme</button>
+    </div>
+    <script>
+        function swapTheme() {
+            var appEnv = document.getElementById("app");
+            var btnEnv = document.getElementById("swap");
+            
+            if(appEnv.classList.contains("day")){
+            appEnv.classList.remove("day");
+            appEnv.classList.add("night");
+            }
+            else{
+            appEnv.classList.remove("night");
+            appEnv.classList.add("day");
+            }
+            if(btnEnv.classList.contains("button_day")){
+            btnEnv.classList.remove("button_day");
+            btnEnv.classList.add("button_night");
+            }
+            else{
+            btnEnv.classlist.remove("button_night");
+            btnEnv.classlist.add("button_day");
+            }
+            }
+    </script>
+</body>
+</html>

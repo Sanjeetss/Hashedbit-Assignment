@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign 4.2</title>
+</head>
+<body>
+
+<div id="container">
+
+</div>
+    <script>
+        function createDiv(width, height, text) {
+            var newDiv = document.createElement('div');
+            newDiv.style.width = width + 'px';
+            newDiv.style.height = height + 'px';
+            newDiv.textContent = text;
+            document.getElementById('container').appendChild(newDiv);
+        }
+        
+        // Do not change this code
+        window.createDiv = createDiv;
+        
+        
+    </script>
+</body>
+</html>
